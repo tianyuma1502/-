@@ -12,6 +12,15 @@
  * Input: n = 0
  * Output: 1
  */
-var countNumbersWithUniqueDigits = function(n) {
-
+var countNumbersWithUniqueDigits = function (n) {
+    if (n === 0) return 1;
+    if (n === 1) return 10;
+    let prev = 10;
+    let curr = 9
+    for (let i = 9; --n>0; i--) {
+        prev +=curr *= i;
+    }
+    return prev;
 };
+
+console.log(countNumbersWithUniqueDigits(8))
