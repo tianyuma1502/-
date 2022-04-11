@@ -24,3 +24,13 @@ var countNumbersWithUniqueDigits = function (n) {
 };
 
 console.log(countNumbersWithUniqueDigits(8))
+
+/**
+ * f(0)=1
+ * f(1)=10
+ * f(2)=9*9+f(1)
+ * f(3)=9*9*8+f(2)
+ * f(4)=9*9*8*7+f(3)
+ * f(n)=9*9*8*7*6+f(n-1)
+ * f(n)=9*(9-0)*(9-1)*(9-2)*(9-3)*(9-n)
+ * f(n)=9*(n--)    */
